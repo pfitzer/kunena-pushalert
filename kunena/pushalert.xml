@@ -7,7 +7,7 @@
 	<authorUrl>http://your.url.com</authorUrl>
 	<copyright>2018 Michael Pfister</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>0.2.1</version>
+	<version>0.3.0</version>
 	<description>PLG_KUNENA_PUSHALERT_XML_DESCRIPTION</description>
 
 	<!-- Scripts to run on installation -->
