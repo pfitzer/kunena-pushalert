@@ -43,8 +43,8 @@ class KunenaPushalert extends KunenaActivity
     {
         if ($this->_checkPermissions($message))
         {
-            $title = "Notification Title";
-            $pushMessage = "Notification Message";
+            $title = sprintf("%s hat auf ein Thema geantwortet", $message->name);
+            $pushMessage = sprintf("Thema: %s", $message->subject);
             $url = $message->getTopic()->getUrl();
             $this->_send_message($title, $pushMessage, $url);
 
@@ -63,8 +63,8 @@ class KunenaPushalert extends KunenaActivity
     {
         if ($this->_checkPermissions($message))
         {
-            $title = Text::_("PLG_PUSHALERT_NEW_TOPIC_TITLE");
-            $pushMessage = "Notification Message";
+            $title = sprintf("%s hat auf ein Thema eröffnet", $message->name);
+            $pushMessage = sprintf("Thema: %s", $message->subject);
             $url = $message->getTopic()->getUrl();
             $this->_send_message($title, $pushMessage, $url);
         }

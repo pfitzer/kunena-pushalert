@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.8" group="kunena" method="upgrade">
-	<name>PLG_PUSHALERT</name>
+	<name>PLG_KUNENA_PUSHALERT</name>
 	<creationDate>11.12.2018</creationDate>
 	<author>Michael Pfister</author>
 	<authorEmail>michael@mp-development.de</authorEmail>
@@ -8,17 +8,17 @@
 	<copyright>2018 Michael Pfister</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<version>0.1.1</version>
-	<description>PLG_PUSHALERT_XML_DESCRIPTION</description>
+	<description>PLG_KUNENA_PUSHALERT_XML_DESCRIPTION</description>
 
 	<!-- Scripts to run on installation -->
 	<scriptfile></scriptfile>
 
 	<!-- Language files -->
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.plg_kuenena-pushalert.ini</language>
-		<language tag="en-GB">en-GB/en-GB.plg_kuenena-pushalert.sys.ini</language>
-		<language tag="de-DE">de-DE/de-DE.plg_kuenena-pushalert.ini</language>
-		<language tag="de-DE">de-DE/de-DE.plg_kuenena-pushalert.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_kunena-pushalert.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_kunena-pushalert.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_kunena-pushalert.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_kunena-pushalert.sys.ini</language>
 	</languages>
 
 	<!-- Plugin files -->
@@ -37,8 +37,8 @@
 					name="apikey"
 					type="text"
 					default="42"
-					label="PLG_PUSHALERT_APIKEY_LABEL"
-					description="PLG_PUSHALERT_APIKEY_DESCRIPTION"
+					label="PLG_KUNENA_PUSHALERT_APIKEY_LABEL"
+					description="PLG_KUNENA_PUSHALERT_APIKEY_DESCRIPTION"
 				/>
 			</fieldset>
 		</fields>
