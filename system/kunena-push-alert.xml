@@ -2,10 +2,10 @@
 <extension type="plugin" version="3.8" group="system" method="upgrade">
 	<name>PLG_KUNENA-PUSH-ALERT</name>
 	<creationDate>11.12.2018</creationDate>
-	<author>A41646139</author>
-	<authorEmail>your@email.com</authorEmail>
+	<author>Michael Pfister</author>
+	<authorEmail>michael@mp-development.de</authorEmail>
 	<authorUrl>http://your.url.com</authorUrl>
-	<copyright>A copyright</copyright>
+	<copyright>2018 Michael Pfister</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<version>1.0</version>
 	<description>PLG_KUNENA-PUSH-ALERT_XML_DESCRIPTION</description>
@@ -42,7 +42,7 @@
 	</config>
 
 	<!-- Update servers -->
-	<updateservers>
+	<!-- <updateservers>
 		<server type="extension" priority="1" name="kunena-push-alert">https://www.example.com/plg_kunena-push-alert.xml</server>
-	</updateservers>
+	</updateservers> -->
 </extension>
