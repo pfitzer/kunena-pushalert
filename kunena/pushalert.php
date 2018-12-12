@@ -39,7 +39,7 @@ class plgKunenaPushalert extends \Joomla\CMS\Plugin\CMSPlugin
     /**
      * Get Kunena activity stream integration object.
      *
-     * @return \KunenaActivityCommunity|null
+     * @return \KunenaPushalert|null
      * @since Kunena
      */
     public function onKunenaGetActivity()
