@@ -45,7 +45,7 @@
 	</config>
 
 	<!-- Update servers -->
-	<!-- <updateservers>
-		<server type="extension" priority="1" name="push-alert">https://www.example.com/plg_push-alert.xml</server>
+	<updateservers>
+		<server type="extension" priority="1" name="Kunena Pushalert Plugin">https://raw.githubusercontent.com/pfitzer/kunena-pushalert/0.4.0/manifest.xml</server>
 	</updateservers> -->
 </extension>
