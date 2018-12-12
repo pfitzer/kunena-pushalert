@@ -1,10 +1,10 @@
 <?php
 /**
- * @package     ${NAMESPACE}
- * @subpackage
+ * @package    kunena-pushalert
  *
- * @copyright   A copyright
- * @license     A "Slug" license name e.g. GPL2
+ * @author     Michael Pfister <michael@mp-development.de>
+ * @copyright  Michael Pfister
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die();

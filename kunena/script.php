@@ -1,12 +1,12 @@
 <?php
 /**
- * @package    kunena-push-alert
+ * @package    kunena-pushalert
  *
- * @author     A41646139 <your@email.com>
- * @copyright  A copyright
+ * @author     Michael Pfister <michael@mp-development.de>
+ * @copyright  Michael Pfister
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @link       http://your.url.com
  */
+
 
 defined('_JEXEC') or die;
 
