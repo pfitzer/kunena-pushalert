@@ -1,10 +1,10 @@
 <?php
 /**
- * @package    kunena-pushalert
+ * @package     ${NAMESPACE}
+ * @subpackage
  *
- * @author     Michael Pfister <michael@mp-development.de>
- * @copyright  Michael Pfister
- * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @copyright   A copyright
+ * @license     A "Slug" license name e.g. GPL2
  */
 
 defined('_JEXEC') or die();
@@ -25,7 +25,7 @@ class KunenaPushalert extends KunenaActivity
     private $curlUrl = null;
 
     /**
-     * @var string|null
+     * @var null
      */
     private $apiKey = null;
 
@@ -41,8 +41,8 @@ class KunenaPushalert extends KunenaActivity
         $this->params = $params;
         $this->curlUrl = "https://api.pushalert.co/rest/v1/send";
         $this->apiKey = $this->params->get("apikey", null);
-        $lang = JFactory::getLanguage();
-        $lang->load('plg_kunena_pushalert', JPATH_ADMINISTRATOR);
+        $this->lang = JFactory::getLanguage();
+        $this->lang->load('plg_kunena_pushalert', JPATH_ADMINISTRATOR);
 
     }
 
@@ -55,14 +55,11 @@ class KunenaPushalert extends KunenaActivity
      */
     public function onAfterReply($message)
     {
-        if ($this->_checkPermissions($message)) {
-            $title = sprintf(Text::_("PLG_KUNENA_PUSHALERT_REPLY_TITLE"), $message->name);
-            $pushMessage = sprintf(Text::_("PLG_KUNENA_PUSHALERT_REPLY_MSG"), $message->subject);
-            $url = $message->getTopic()->getUrl();
-            $this->_send_message($title, $pushMessage, $url);
-
-
-        }
+        $this->_prepareAndSend(
+            $message,
+            Text::_("PLG_KUNENA_PUSHALERT_REPLY_TITLE"),
+            Text::_("PLG_KUNENA_PUSHALERT_REPLY_MSG")
+        );
     }
 
     /**
@@ -74,12 +71,11 @@ class KunenaPushalert extends KunenaActivity
      */
     public function onAfterPost($message)
     {
-        if ($this->_checkPermissions($message)) {
-            $title = sprintf(Text::_("PLG_KUNENA_PUSHALERT_TOPIC_TITLE"), $message->name);
-            $pushMessage = sprintf(Text::_("PLG_KUNENA_PUSHALERT_TOPIC_MSG"), $message->subject);
-            $url = $message->getTopic()->getUrl();
-            $this->_send_message($title, $pushMessage, $url);
-        }
+        $this->_prepareAndSend(
+            $message,
+            Text::_("PLG_KUNENA_PUSHALERT_TOPIC_TITLE"),
+            Text::_("PLG_KUNENA_PUSHALERT_TOPIC_MSG")
+        );
     }
 
     /**
@@ -136,5 +132,22 @@ class KunenaPushalert extends KunenaActivity
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         curl_exec($ch);
+    }
+
+    /**
+     * @param KunenaDatabaseObject $message
+     * @param string $translatedTitle
+     * @param string $translatedMsg
+     *
+     * @return void
+     */
+    private function _prepareAndSend($message, $translatedTitle, $translatedMsg)
+    {
+        if ($this->_checkPermissions($message)) {
+            $title = sprintf($translatedTitle, $message->name);
+            $pushMessage = sprintf($translatedMsg, $message->subject);
+            $url = $message->getTopic()->getUrl();
+            $this->_send_message($title, $pushMessage, $url);
+        }
     }
 }
