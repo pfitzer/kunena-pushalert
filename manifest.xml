@@ -5,6 +5,7 @@
         <description>Plugin to push new Kunena posts with pushalert.co</description>
         <element>plg_kunena_pushalert</element>
         <type>plugin</type>
+        <client>0</client>
         <version>0.4.4</version>
         <folder>kunena</folder>
         <infourl title="Kunena Pushalert Plugin">https://github.com/pfitzer/kunena-pushalert/releases/tag/0.4.4
