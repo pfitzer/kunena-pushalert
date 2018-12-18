@@ -3,7 +3,7 @@
     <update>
         <name>Kunena Pushalert Plugin</name>
         <description>Plugin to push new Kunena posts with pushalert.co</description>
-        <element>pkg_kunena_pushalert</element>
+        <element>plg_kunena_pushalert</element>
         <type>plugin</type>
         <version>0.4.4</version>
         <client>site</client>
