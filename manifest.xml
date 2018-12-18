@@ -23,4 +23,27 @@
         <targetplatform name="joomla" version="3.[89]"/>
         <php_minimum>7</php_minimum>
     </update>
+    <update>
+        <name>Kunena Pushalert Plugin</name>
+        <description>Plugin to push new Kunena posts with pushalert.co</description>
+        <element>plg_kunena_pushalert</element>
+        <type>plugin</type>
+        <client>0</client>
+        <version>0.4.3</version>
+        <folder>kunena</folder>
+        <infourl title="Kunena Pushalert Plugin">https://github.com/pfitzer/kunena-pushalert/releases/tag/0.4.3
+        </infourl>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <maintainer>Michael Pfister</maintainer>
+        <maintainerurl>https://www.mp-development.de</maintainerurl>
+        <downloads>
+            <downloadurl type="full" format="tar">
+                https://www.mp-development.de/downloads/kunena-pushalert_0.4.3.tar.gz
+            </downloadurl>
+        </downloads>
+        <targetplatform name="joomla" version="3.[89]"/>
+        <php_minimum>7</php_minimum>
+    </update>
 </updates>
