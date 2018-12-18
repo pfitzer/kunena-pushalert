@@ -13,16 +13,11 @@ use Joomla\CMS\Language\Text;
 
 class KunenaPushalert extends KunenaActivity
 {
-    /**
-     * @var null
-     * @since Kunena
-     */
-    protected $params = null;
 
     /**
-     * @var string|null
+     * @var string
      */
-    private $curlUrl = null;
+    private $curlUrl = "https://api.pushalert.co/rest/v1/send";
 
     /**
      * @var null
@@ -38,9 +33,7 @@ class KunenaPushalert extends KunenaActivity
      */
     public function __construct($params)
     {
-        $this->params = $params;
-        $this->curlUrl = "https://api.pushalert.co/rest/v1/send";
-        $this->apiKey = $this->params->get("apikey", null);
+        $this->apiKey = $params->get("apikey", null);
         $this->lang = JFactory::getLanguage();
         $this->lang->load('plg_kunena_pushalert', JPATH_ADMINISTRATOR);
 
