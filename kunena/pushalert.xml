@@ -4,10 +4,10 @@
 	<creationDate>11.12.2018</creationDate>
 	<author>Michael Pfister</author>
 	<authorEmail>michael@mp-development.de</authorEmail>
-	<authorUrl>http://your.url.com</authorUrl>
+	<authorUrl>http://www.mp-development.de</authorUrl>
 	<copyright>2018 Michael Pfister</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>0.4.5</version>
+	<version>0.5.0</version>
 	<description>PLG_KUNENA_PUSHALERT_XML_DESCRIPTION</description>
 	<!-- Language files -->
 	<languages folder="language">
@@ -42,6 +42,6 @@
 
 	<!-- Update servers -->
 	<updateservers>
-		<server type="extension" name="Kunena Pushalert Plugin">https://www.mp-development.de/downloads/manifest.xml</server>
+		<server type="extension" name="Kunena Pushalert Plugin">https://raw.githubusercontent.com/pfitzer/kunena-pushalert/master/manifest.xml</server>
 	</updateservers> -->
 </extension>

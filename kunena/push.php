@@ -114,17 +114,9 @@ class KunenaPushalert extends KunenaActivity
             "url" => JUri::base() . mb_substr($url, 1)
         );
 
-        $headers = Array();
-        $headers[] = "Authorization: api_key=" . $this->apiKey;
+        $request = new Joomla\CMS\Http\Http();
+        $request->post($this->curlUrl, $post_vars, array('Authorization' => 'api_key=' . $this->apiKey));
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->curlUrl);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_vars));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-        curl_exec($ch);
     }
 
     /**
@@ -139,7 +131,8 @@ class KunenaPushalert extends KunenaActivity
         if ($this->_checkPermissions($message)) {
             $title = sprintf($translatedTitle, $message->name);
             $pushMessage = sprintf($translatedMsg, $message->subject);
-            $url = $message->getTopic()->getUrl();
+            $url = htmlspecialchars_decode(JUri::base(). mb_substr($message->getPermaUrl(), 1)
+                . '#' . $message->id);
             $this->_send_message($title, $pushMessage, $url);
         }
     }
