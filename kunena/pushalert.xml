@@ -7,7 +7,7 @@
 	<authorUrl>http://www.mp-development.de</authorUrl>
 	<copyright>2018 Michael Pfister</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>0.5.0</version>
+	<version>0.5.1</version>
 	<description>PLG_KUNENA_PUSHALERT_XML_DESCRIPTION</description>
 	<!-- Language files -->
 	<languages folder="language">

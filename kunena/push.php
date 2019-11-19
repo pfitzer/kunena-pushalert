@@ -111,7 +111,7 @@ class KunenaPushalert extends KunenaActivity
         $post_vars = array(
             "title" => $title,
             "message" => $pushMessage,
-            "url" => JUri::base() . mb_substr($url, 1)
+            "url" => $url
         );
 
         $request = new Joomla\CMS\Http\Http();
