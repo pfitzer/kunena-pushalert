@@ -82,7 +82,7 @@ class KunenaPushalert extends KunenaActivity
         $category = $message->getCategory();
         $accesstype = $category->accesstype;
 
-        if ($accesstype != 'joomla.group' && $accesstype != 'joomla.level') {
+        if ($accesstype != 'joomla.group' || $accesstype != 'joomla.level') {
             return false;
         }
 
@@ -131,8 +131,7 @@ class KunenaPushalert extends KunenaActivity
         if ($this->_checkPermissions($message)) {
             $title = sprintf($translatedTitle, $message->name);
             $pushMessage = sprintf($translatedMsg, $message->subject);
-            $url = htmlspecialchars_decode(JUri::base(). mb_substr($message->getPermaUrl(), 1)
-                . '#' . $message->id);
+            $url = JUri::base() . mb_substr($message->getUrl(), 1);
             $this->_send_message($title, $pushMessage, $url);
         }
     }
